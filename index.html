@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艺术画廊</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>艺术画廊</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">全部作品</a></li>
+                <li><a href="#">油画</a></li>
+                <li><a href="#">水彩</a></li>
+                <li><a href="#">素描</a></li>
+            </ul>
+        </nav>
+        <div class="upload-container">
+            <button id="uploadBtn" class="upload-btn">上传新作品</button>
+        </div>
+    </header>
+
+    <!-- 上传对话框 -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>上传新作品</h2>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label for="imageFile">选择图片：</label>
+                    <input type="file" id="imageFile" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">作品名称：</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">作品类型：</label>
+                    <select id="category" name="category" required>
+                        <option value="油画">油画</option>
+                        <option value="水彩">水彩</option>
+                        <option value="素描">素描</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="artist">艺术家：</label>
+                    <input type="text" id="artist" name="artist" required>
+                </div>
+                <button type="submit" class="submit-btn">上传作品</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="gallery" id="gallery">
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1585325/pexels-photo-1585325.jpeg" alt="山水风景画">
+            <div class="overlay">
+                <h3>青山绿水</h3>
+                <p>油画 - 张艺术家</p>
+                <button class="download-btn" data-filename="青山绿水.jpg">下载作品</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg" alt="抽象艺术">
+            <div class="overlay">
+                <h3>色彩交响</h3>
+                <p>抽象油画 - 李大师</p>
+                <button class="download-btn" data-filename="色彩交响.jpg">下载作品</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg" alt="水彩花卉">
+            <div class="overlay">
+                <h3>春日花语</h3>
+                <p>水彩 - 王画家</p>
+                <button class="download-btn" data-filename="春日花语.jpg">下载作品</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg" alt="现代艺术">
+            <div class="overlay">
+                <h3>都市印象</h3>
+                <p>混合媒材 - 陈艺术家</p>
+                <button class="download-btn" data-filename="都市印象.jpg">下载作品</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1579708/pexels-photo-1579708.jpeg" alt="静物写生">
+            <div class="overlay">
+                <h3>静谧时光</h3>
+                <p>素描 - 刘画家</p>
+                <button class="download-btn" data-filename="静谧时光.jpg">下载作品</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1918290/pexels-photo-1918290.jpeg" alt="风景油画">
+            <div class="overlay">
+                <h3>暮色山水</h3>
+                <p>油画 - 赵大师</p>
+                <button class="download-btn" data-filename="暮色山水.jpg">下载作品</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1568607/pexels-photo-1568607.jpeg" alt="现代抽象">
+            <div class="overlay">
+                <h3>心灵律动</h3>
+                <p>抽象艺术 - 孙画家</p>
+                <button class="download-btn" data-filename="心灵律动.jpg">下载作品</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1616164/pexels-photo-1616164.jpeg" alt="水彩风景">
+            <div class="overlay">
+                <h3>晨光初现</h3>
+                <p>水彩 - 吴艺术家</p>
+                <button class="download-btn" data-filename="晨光初现.jpg">下载作品</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="大图">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 艺术画廊 版权所有</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
